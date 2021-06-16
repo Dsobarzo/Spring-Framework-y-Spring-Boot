@@ -1,4 +1,4 @@
-package com.dsobarzo.holamundothymeleaf;
+package com.dsobarzo.holamundothymeleaf.web;
 
 import com.dsobarzo.holamundothymeleaf.domain.Persona;
 import lombok.extern.slf4j.Slf4j;
@@ -14,8 +14,8 @@ import java.util.Arrays;
 @Slf4j
 public class ControladorInicio {
 
-    @Value("${index.saludo}")
-    private String saludo;
+    /*@Value("${index.saludo}")
+    private String saludo;*/
 
     // "/" Ruta en blanco -> LocalHost
     @GetMapping("/")
@@ -38,13 +38,13 @@ public class ControladorInicio {
         personas.add(persona);
         personas.add(persona2);*/
 
-        //var personas = Arrays.asList(persona, persona2);
-        var personas = Arrays.asList();
+        var personas = Arrays.asList(persona, persona2);
+        //var personas = Arrays.asList();
 
         log.info("Ejecutando el controlador SpringMCV");
         model.addAttribute("mensaje", mensaje);
         model.addAttribute("mensaje2", mensaje2);
-        model.addAttribute("saludo", saludo);
+        //model.addAttribute("saludo", saludo);
         model.addAttribute("persona", persona);
         model.addAttribute("personas", personas);
         return "index";
