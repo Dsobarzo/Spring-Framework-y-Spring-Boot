@@ -40,6 +40,7 @@ public class ControladorInicio {
 
         //var personas = Arrays.asList(persona, persona2);
         var personas = Arrays.asList();
+
         log.info("Ejecutando el controlador SpringMCV");
         model.addAttribute("mensaje", mensaje);
         model.addAttribute("mensaje2", mensaje2);
